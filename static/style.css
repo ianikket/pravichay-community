@@ -1,0 +1,52 @@
+:root { color-scheme: dark; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #e5e9ee; background: #0c1016; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+header, main, footer { max-width: 1240px; margin: auto; }
+header { display: flex; align-items: center; justify-content: space-between; padding: 26px 32px; border-bottom: 1px solid #252c36; }
+.brand { color: #f5f7fa; text-decoration: none; font-size: 18px; font-weight: 650; display: flex; gap: 12px; align-items: center; }
+.mark { border: 1px solid #986b33; border-radius: 10px; color: #ffc075; padding: 5px 11px; font-size: 25px; background: #271f16; }
+.badge, .eyebrow, .graph-toolbar { font-size: 11px; font-weight: 650; letter-spacing: 1.5px; }
+.badge { color: #b4bdca; border: 1px solid #343b45; border-radius: 5px; padding: 8px 10px; }
+main { padding: 45px 32px 0; }
+.eyebrow { color: #ecb474; margin: 0 0 14px; }
+h1 { font-size: clamp(25px, 4vw, 36px); font-weight: 600; letter-spacing: -1.1px; margin: 0 0 14px; }
+.subtitle { color: #a8b2c0; line-height: 1.7; font-size: 15px; margin: 0 0 30px; }
+label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 10px; }
+.input-row { display: flex; gap: 10px; }
+input, button { border-radius: 7px; font: inherit; font-size: 14px; }
+input { width: 100%; min-width: 0; background: #141a23; border: 1px solid #38414f; color: #f1f5f9; padding: 14px; font-family: ui-monospace, monospace; }
+button { border: 1px solid #f4b367; background: #f4b367; color: #20170d; padding: 12px 20px; font-weight: 650; cursor: pointer; white-space: nowrap; }
+button.secondary { border-color: #38414f; background: #171e27; color: #e1e6ed; }
+button:disabled { opacity: .5; cursor: wait; }
+button:hover:not(:disabled) { filter: brightness(1.12); }
+:focus-visible { outline: 2px solid #f4b367; outline-offset: 4px; }
+.privacy, .context { color: #9ba8b9; font-size: 12px; line-height: 1.7; }
+.privacy { margin: 10px 0 28px; }
+.graph-panel { background: #111720; border: 1px solid #2b3441; border-radius: 12px; overflow: hidden; }
+.graph-toolbar { display: flex; justify-content: space-between; padding: 18px 22px; border-bottom: 1px solid #29313d; color: #b0becf; }
+#graph-count { font-weight: 400; letter-spacing: 0; }
+#status { min-height: 24px; margin: 16px 22px 0; font-size: 13px; color: #adbacb; }
+#status.error { color: #ffb6b6; }
+#graph-viewport { width: 100%; min-height: 400px; max-height: 700px; overflow: auto; background-image: radial-gradient(#29323e 1px, transparent 1px); background-size: 24px 24px; }
+#empty-state { text-align: center; padding: 110px 20px; color: #8c9aae; }
+.empty-symbol { font-size: 32px; color: #7e8da2; letter-spacing: 8px; }
+#empty-state h2 { font-size: 16px; color: #bac4d2; font-weight: 500; margin-top: 28px; }
+#empty-state p { font-size: 13px; }
+#graph { display: block; }
+#graph[hidden], #empty-state[hidden] { display: none; }
+.edge { fill: none; stroke: #546981; stroke-width: 1.5; }
+.edge-label { fill: #bac9da; font-size: 10px; paint-order: stroke; stroke: #111720; stroke-width: 4px; stroke-linejoin: round; }
+.arrowhead { fill: #6a809b; }
+.node rect { fill: #1b2532; stroke: #516278; stroke-width: 1.2; }
+.node.root rect { fill: #302619; stroke: #f4b367; }
+.node text { fill: #e1e8f0; font-size: 12px; font-family: ui-monospace, monospace; }
+.node .node-action { fill: #a5b5c9; font: 10px -apple-system, BlinkMacSystemFont, sans-serif; }
+.node.expandable { cursor: pointer; }
+.node.expandable:hover rect, .node:focus-visible rect { stroke: #f4b367; stroke-width: 2px; }
+.graph-footer { display: flex; gap: 24px; flex-wrap: wrap; padding: 16px 22px; border-top: 1px solid #29313d; font-size: 11px; color: #a4b1c3; }
+.graph-footer span:last-child { margin-left: auto; }
+.dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #f4b367; margin-right: 6px; }
+.dot.neutral { background: #71849d; }
+.context { margin: 17px 0 30px; max-width: 920px; }
+footer { padding: 20px 32px 28px; color: #93a1b4; font-size: 11px; border-top: 1px solid #252c36; display: flex; justify-content: space-between; }
+@media (max-width: 640px) { header { padding: 20px 18px; } .brand { font-size: 14px; } .badge { font-size: 9px; } main { padding: 30px 18px 0; } .input-row { flex-wrap: wrap; } input { flex-basis: 100%; } .input-row button { flex: 1; } .graph-footer { gap: 12px; } .graph-footer span:last-child { margin-left: 0; } footer { padding: 20px 18px; } }

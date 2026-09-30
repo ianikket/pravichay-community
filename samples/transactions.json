@@ -1,0 +1,228 @@
+{
+  "description": "Entirely invented educational sample. Labels and transaction IDs do not describe real Bitcoin activity.",
+  "transactions": {
+    "demo-root": [
+      {
+        "txid": "0000000000000000000000000000000000000000000000000000000000000001",
+        "vin": [
+          {
+            "prevout": {
+              "scriptpubkey_address": "demo-root"
+            }
+          }
+        ],
+        "vout": [
+          {
+            "scriptpubkey_address": "demo-alice",
+            "value": 1000000
+          }
+        ]
+      },
+      {
+        "txid": "0000000000000000000000000000000000000000000000000000000000000002",
+        "vin": [
+          {
+            "prevout": {
+              "scriptpubkey_address": "demo-root"
+            }
+          }
+        ],
+        "vout": [
+          {
+            "scriptpubkey_address": "demo-bob",
+            "value": 2000000
+          }
+        ]
+      },
+      {
+        "txid": "0000000000000000000000000000000000000000000000000000000000000003",
+        "vin": [
+          {
+            "prevout": {
+              "scriptpubkey_address": "demo-root"
+            }
+          }
+        ],
+        "vout": [
+          {
+            "scriptpubkey_address": "demo-carol",
+            "value": 3000000
+          }
+        ]
+      },
+      {
+        "txid": "0000000000000000000000000000000000000000000000000000000000000004",
+        "vin": [
+          {
+            "prevout": {
+              "scriptpubkey_address": "demo-root"
+            }
+          }
+        ],
+        "vout": [
+          {
+            "scriptpubkey_address": "demo-hidden-initial",
+            "value": 4000000
+          }
+        ]
+      }
+    ],
+    "demo-alice": [
+      {
+        "txid": "0000000000000000000000000000000000000000000000000000000000000005",
+        "vin": [
+          {
+            "prevout": {
+              "scriptpubkey_address": "demo-alice"
+            }
+          }
+        ],
+        "vout": [
+          {
+            "scriptpubkey_address": "demo-dana",
+            "value": 1000000
+          }
+        ]
+      },
+      {
+        "txid": "0000000000000000000000000000000000000000000000000000000000000006",
+        "vin": [
+          {
+            "prevout": {
+              "scriptpubkey_address": "demo-alice"
+            }
+          }
+        ],
+        "vout": [
+          {
+            "scriptpubkey_address": "demo-erin",
+            "value": 2000000
+          }
+        ]
+      },
+      {
+        "txid": "0000000000000000000000000000000000000000000000000000000000000007",
+        "vin": [
+          {
+            "prevout": {
+              "scriptpubkey_address": "demo-alice"
+            }
+          }
+        ],
+        "vout": [
+          {
+            "scriptpubkey_address": "demo-hidden-expansion",
+            "value": 3000000
+          }
+        ]
+      }
+    ],
+    "demo-bob": [
+      {
+        "txid": "0000000000000000000000000000000000000000000000000000000000000008",
+        "vin": [
+          {
+            "prevout": {
+              "scriptpubkey_address": "demo-bob"
+            }
+          }
+        ],
+        "vout": [
+          {
+            "scriptpubkey_address": "demo-frank",
+            "value": 1000000
+          }
+        ]
+      },
+      {
+        "txid": "0000000000000000000000000000000000000000000000000000000000000009",
+        "vin": [
+          {
+            "prevout": {
+              "scriptpubkey_address": "demo-bob"
+            }
+          }
+        ],
+        "vout": [
+          {
+            "scriptpubkey_address": "demo-dana",
+            "value": 2000000
+          }
+        ]
+      }
+    ],
+    "demo-carol": [
+      {
+        "txid": "000000000000000000000000000000000000000000000000000000000000000a",
+        "vin": [
+          {
+            "prevout": {
+              "scriptpubkey_address": "demo-carol"
+            }
+          }
+        ],
+        "vout": [
+          {
+            "scriptpubkey_address": "demo-grace",
+            "value": 1000000
+          }
+        ]
+      },
+      {
+        "txid": "000000000000000000000000000000000000000000000000000000000000000b",
+        "vin": [
+          {
+            "prevout": {
+              "scriptpubkey_address": "demo-carol"
+            }
+          }
+        ],
+        "vout": [
+          {
+            "scriptpubkey_address": "demo-heidi",
+            "value": 2000000
+          }
+        ]
+      }
+    ],
+    "demo-dana": [
+      {
+        "txid": "000000000000000000000000000000000000000000000000000000000000000c",
+        "vin": [
+          {
+            "prevout": {
+              "scriptpubkey_address": "demo-dana"
+            }
+          }
+        ],
+        "vout": [
+          {
+            "scriptpubkey_address": "demo-root",
+            "value": 1000000
+          }
+        ]
+      },
+      {
+        "txid": "000000000000000000000000000000000000000000000000000000000000000d",
+        "vin": [
+          {
+            "prevout": {
+              "scriptpubkey_address": "demo-dana"
+            }
+          }
+        ],
+        "vout": [
+          {
+            "scriptpubkey_address": "demo-ivan",
+            "value": 2000000
+          }
+        ]
+      }
+    ],
+    "demo-erin": [],
+    "demo-frank": [],
+    "demo-grace": [],
+    "demo-heidi": [],
+    "demo-ivan": []
+  }
+}

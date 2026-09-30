@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BTC Flow Tracer · Community</title>
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/" aria-label="BTC Flow Tracer home"><span class="mark">₿</span> BTC Flow Tracer</a>
+    <span class="badge">COMMUNITY / V1</span>
+  </header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">FOLLOW THE CONNECTIONS</p>
+      <h1>A simple view of Bitcoin activity.</h1>
+      <p class="subtitle">Start with an address. Follow up to 3 outgoing connections, then explore 2 more from each address.</p>
+    </section>
+    <form id="trace-form">
+      <label for="address">Bitcoin mainnet address</label>
+      <div class="input-row">
+        <input id="address" name="address" placeholder="Enter a 1, 3, or bc1 address" maxlength="90" required autocomplete="off" spellcheck="false">
+        <button id="trace-button" type="submit">Trace address <span aria-hidden="true">→</span></button>
+        <button id="sample-button" class="secondary" type="button">Try a sample</button>
+      </div>
+      <p class="privacy">Live traces query Blockstream’s public explorer. The sample is synthetic and stays offline.</p>
+    </form>
+    <section class="graph-panel" aria-label="Transaction connection graph">
+      <div class="graph-toolbar"><span id="source-label">YOUR TRACE</span><span id="graph-count">Ready to explore</span></div>
+      <p id="status" role="status" aria-live="polite">Enter an address or try the sample to see its connections.</p>
+      <div id="graph-viewport">
+        <div id="empty-state"><div class="empty-symbol" aria-hidden="true">○ ── ◇ ── ○</div><h2>Every trace starts somewhere.</h2><p>Your graph will appear here.</p></div>
+        <svg id="graph" role="group" aria-label="Bitcoin address connections" hidden></svg>
+      </div>
+      <div class="graph-footer"><span><i class="dot"></i>Starting address</span><span><i class="dot neutral"></i>Connected address</span><span>Click a node to expand · Scroll to explore</span></div>
+    </section>
+    <p class="context">Arrows show outputs of transactions that include the selected address as an input. Amounts are full output values, not proof that this address funded them. Only a recent, limited view is shown.</p>
+  </main>
+  <footer>BTC Flow Tracer Community <span>Simple. Open. Trace only.</span></footer>
+</body>
+</html>
