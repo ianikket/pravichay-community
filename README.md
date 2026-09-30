@@ -13,7 +13,7 @@ There are no API keys to configure. Only the graph is included.
 Use Python **3.10 or newer** with OpenSSL support and Git.
 
 ```sh
-git clone https://github.com/ianikket/btc-flow-tracer-community.git
+git clone https://github.com/ianikket/pravichay-community.git btc-flow-tracer-community
 cd btc-flow-tracer-community
 python3 -m venv .venv
 source .venv/bin/activate
